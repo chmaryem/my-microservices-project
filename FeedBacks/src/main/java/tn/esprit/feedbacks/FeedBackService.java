@@ -43,5 +43,16 @@ public class FeedBackService implements IFeedBack{
 
         return feedBackRepository.save(existingFeedback);
     }
+    public List<FeedBack> filterByRating(int minRating) {
+        return feedBackRepository.findByRatingGreaterThanEqual(minRating);
+    }
+
+    public Double getAverageRating(Long trainingId) {
+        return feedBackRepository.getAverageRatingByTraining(trainingId);
+    }
+
+    public Long getFeedbackCount(Long trainingId) {
+        return feedBackRepository.countByTrainingId(trainingId);
+    }
 
 }
