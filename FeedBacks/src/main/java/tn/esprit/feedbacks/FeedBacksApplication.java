@@ -17,7 +17,7 @@ public class FeedBacksApplication {
         SpringApplication.run(FeedBacksApplication.class, args);
     }
 
-
+/*
     @Autowired
     private FeedBackRepository repository;
 
@@ -37,6 +37,6 @@ public class FeedBacksApplication {
 
 
         };
-    }
+    }*/
 }
 

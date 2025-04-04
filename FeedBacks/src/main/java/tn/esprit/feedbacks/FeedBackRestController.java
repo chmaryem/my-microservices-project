@@ -17,6 +17,7 @@ public class FeedBackRestController {
 
     @PostMapping
     public ResponseEntity<FeedBack> addFeedback(@RequestBody FeedBack feedback) {
+        System.out.println("📥 Feedback reçu : " + feedback);
         return ResponseEntity.ok(feedbackService.addFeedback(feedback));
     }
 
